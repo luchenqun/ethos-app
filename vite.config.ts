@@ -47,6 +47,9 @@ export default defineConfig(configEnv => {
       commonjsOptions: {
         ignoreTryCatch: false
       }
+    },
+    compilerOptions: {
+      isCustomElement: (tag: string) => tag === 'w3m-button'
     }
   };
 });
