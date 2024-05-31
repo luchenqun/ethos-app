@@ -11,3 +11,16 @@ export const cerboDev = {
   },
   contracts: {}
 } as const satisfies Chain;
+
+export const mudTestnet = {
+  id: 168169,
+  name: 'mud testnet',
+  nativeCurrency: { name: 'mud', symbol: 'mud', decimals: 18 },
+  rpcUrls: {
+    default: { http: ['https://testnet-rpc.mud-chain.net/'] }
+  },
+  blockExplorers: {
+    default: { name: 'mud scan', url: 'https://testnet-scan.mud-chain.net/' }
+  },
+  contracts: {}
+} as const satisfies Chain;

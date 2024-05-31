@@ -6,7 +6,7 @@ import { reconnect } from '@wagmi/core';
 import { useAppStore } from './store/modules/app';
 import { useThemeStore } from './store/modules/theme';
 import { naiveDateLocales, naiveLocales } from './locales/naive';
-import { cerboDev } from './constants/chain';
+import { cerboDev, mudTestnet } from './constants/chain';
 
 defineOptions({
   name: 'App'
@@ -30,14 +30,14 @@ const projectId = '01c5cd8b308c4752b74fad24cccc7b78';
 
 // 2. Create wagmiConfig
 const metadata = {
-  name: 'cerbo app',
-  description: 'cerbo chain app',
+  name: 'chain app',
+  description: 'chain app',
   url: 'https://web3modal.com', // origin must match your domain & subdomain
   icons: ['https://avatars.githubusercontent.com/u/37784886']
 };
 
 const config = defaultWagmiConfig({
-  chains: [cerboDev],
+  chains: [mudTestnet, cerboDev],
   projectId,
   metadata
   // ...wagmiOptions // Optional - Override createConfig parameters
