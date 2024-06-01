@@ -85,6 +85,7 @@ function handleDropdown(key: DropdownKey) {
       </ButtonIcon>
     </div>
   </NDropdown>
+
   <div>
     <w3m-button />
   </div>

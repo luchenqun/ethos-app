@@ -39,7 +39,9 @@ const metadata = {
 const config = defaultWagmiConfig({
   chains: [mudTestnet, cerboDev],
   projectId,
-  metadata
+  metadata,
+  enableInjected: true,
+  enableWalletConnect: true
   // ...wagmiOptions // Optional - Override createConfig parameters
 });
 
@@ -48,8 +50,6 @@ reconnect(config);
 createWeb3Modal({
   wagmiConfig: config,
   projectId,
-  enableAnalytics: true, // Optional - defaults to your Cloud configuration
-  enableOnramp: true,
   themeMode: 'light',
   themeVariables: {
     '--w3m-font-family': 'Roboto, sans-serif',

@@ -1,5 +1,4 @@
 import { $t } from '@/locales';
-
 /**
  * Transform record to option
  *
@@ -55,4 +54,12 @@ export function toggleHtmlClass(className: string) {
     add,
     remove
   };
+}
+
+export function statusStr(status: number) {
+  if (status === 0) return 'Unspecified';
+  if (status === 3) return 'Bonded';
+  if (status === 2) return 'Unbonding';
+  if (status === 1) return 'Unbonded';
+  return 'Unspecified';
 }

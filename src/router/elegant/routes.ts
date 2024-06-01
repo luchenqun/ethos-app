@@ -339,5 +339,16 @@ export const generatedRoutes: GeneratedRoute[] = [
       i18nKey: 'route.user-center',
       hideInMenu: true
     }
+  },
+  {
+    name: 'validator',
+    path: '/validator',
+    component: 'layout.base$view.validator',
+    meta: {
+      title: 'validator',
+      i18nKey: 'route.validator',
+      icon: 'mdi:account-group',
+      order: 1
+    }
   }
 ];
